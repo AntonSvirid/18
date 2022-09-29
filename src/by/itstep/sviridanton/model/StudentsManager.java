@@ -4,6 +4,12 @@ public class StudentsManager {
    // public static final int STUDENT_COUNT = 5;
 
     public static double CalculatedAvgStudentMark(int[] marks) {
+
+        // активная защита от дурака
+        if (marks == null || marks.length == 0) {
+            return -1;
+        }
+
         double s = 0;
 
         for (int i = 0; i < marks.length; i++) {
